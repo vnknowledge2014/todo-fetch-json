@@ -1,6 +1,6 @@
 import axios from 'axios';
 import url from '../lib/env';
-import log from '../lib/console';
+import logTodo from '../lib/console';
 import Todo from '../interface/iTodo';
 
 export default {
@@ -13,7 +13,7 @@ export default {
         const TITLE = todo.title;
         const COMPLETED = todo.completed;
 
-        log(`
+        logTodo(`
           The Todo with ID: ${ID}
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
@@ -30,7 +30,7 @@ export default {
       const TITLE = todo.title;
       const COMPLETED = todo.completed;
 
-      log(`
+      logTodo(`
           The Todo with ID: ${ID}
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
@@ -46,7 +46,7 @@ export default {
       const TITLE = todo.title;
       const COMPLETED = todo.completed;
 
-      log(`
+      logTodo(`
           The Todo with ID: ${ID}
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
@@ -64,7 +64,7 @@ export default {
         const TITLE = todo.title;
         const COMPLETED = todo.completed;
 
-        log(`
+        logTodo(`
           The Todo with ID: ${ID}
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
@@ -81,7 +81,7 @@ export default {
       const TITLE = todo.title;
       const COMPLETED = todo.completed;
 
-      log(`
+      logTodo(`
           The Todo with ID: ${ID}
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
@@ -91,5 +91,6 @@ export default {
 
   deleteTodoItemFollowByID: (id: number) => {
     axios.delete(`${url}${id}`);
+    logTodo(`The Todo with ID: ${id} deleted`);
   }
 };

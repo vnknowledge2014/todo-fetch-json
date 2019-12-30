@@ -1,5 +1,5 @@
-const log = (...result) => {
+const logTodo = (...result) => {
   console.log(...result);
 };
 
-export default log;
+export default logTodo;
