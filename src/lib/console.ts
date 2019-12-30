@@ -1,4 +1,4 @@
-const logTodo = (...result) => {
+const logTodo = (...result: any[]) => {
   console.log(...result);
 };
 

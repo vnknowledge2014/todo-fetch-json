@@ -30,4 +30,4 @@ let makeATodoList = [todoItem, todoItem2];
 // todoAPI.deleteTodoItemFollowByID(1);
 // todoAPI.updateTodoItemFollowByID(1, todoItemUpdate);
 // todoAPI.addNewTodoItem(todoItem);
-// todoAPI.addListTodoItem(makeATodoList);
+todoAPI.addListTodoItem(makeATodoList);

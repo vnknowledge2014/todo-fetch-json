@@ -91,6 +91,5 @@ export default {
 
   deleteTodoItemFollowByID: (id: number) => {
     axios.delete(`${url}${id}`);
-    logTodo(`The Todo with ID: ${id} deleted`);
   }
 };
