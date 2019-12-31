@@ -8,7 +8,7 @@ export default {
     axios.get(url).then(res => {
       const todoList: Todo[] = res.data;
 
-      for (let todo of todoList) {
+      todoList.map((todo: Todo) => {
         const ID = todo.id;
         const TITLE = todo.title;
         const COMPLETED = todo.completed;
@@ -18,7 +18,7 @@ export default {
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
         `);
-      }
+      });
     });
   },
 
@@ -59,7 +59,7 @@ export default {
       let todoList: Todo[] = Object.values(res.data);
       todoList.splice(todoList.length - 1, 1);
 
-      for (let todo of todoList) {
+      todoList.map((todo: Todo) => {
         const ID = todo.id;
         const TITLE = todo.title;
         const COMPLETED = todo.completed;
@@ -69,7 +69,7 @@ export default {
           Has a title of: ${TITLE}
           Is it finished? ${COMPLETED}
         `);
-      }
+      });
     });
   },
 
