@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from './node_modules/axios';
 import url from '../lib/env';
 import logTodo from '../lib/console';
 import Todo from '../interface/iTodo';
